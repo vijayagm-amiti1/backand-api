@@ -1,0 +1,33 @@
+# --- Java / Spring Boot (backand) ---
+target/
+!.mvn/wrapper/maven-wrapper.jar
+*.class
+*.jar
+*.war
+*.ear
+*.log
+
+# --- Node.js / Frontend (Stencil / Vue) ---
+node_modules/
+dist/
+www/
+.stencil/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- IDE / OS Specific ---
+.idea/
+.vscode/
+*.swp
+*.DS_Store
+Thumbs.db
+.settings/
+.project
+.classpath
+
+# --- Environment / Database ---
+.env
+.env.local
+# If you have local postgres configs
+pgdata/
