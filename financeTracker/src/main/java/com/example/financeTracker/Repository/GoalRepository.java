@@ -1,0 +1,18 @@
+package com.example.financeTracker.Repository;
+
+import com.example.financeTracker.Entity.Goal;
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface GoalRepository extends JpaRepository<Goal, UUID> {
+
+    List<Goal> findAllByUserId(UUID userId);
+
+    Optional<Goal> findByIdAndUserId(UUID id, UUID userId);
+
+    Optional<Goal> findByUserIdAndNameIgnoreCase(UUID userId, String name);
+
+    List<Goal> findAllByUserIdAndLinkedAccountId(UUID userId, UUID linkedAccountId);
+}
